@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from sqlmodel import Session, select
 from database import engine, init_db
-from .models import Brainrot
+from models import Brainrot
 
 app = FastAPI()
 
