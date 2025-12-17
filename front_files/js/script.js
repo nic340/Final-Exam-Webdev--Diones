@@ -9,7 +9,7 @@ async function loadBrainrots() {
 
   data.forEach(item => {
     const li = document.createElement("li");
-    li.textContent = `${item.title} - ${item.description} (Score: ${item.score})`;
+    li.textContent = `${item.title} - ${item.content} (Image: ${item.image})`;
     list.appendChild(li);
   });
 }
