@@ -17,7 +17,7 @@ app.add_middleware(
 
 @app.on_event("startup")
 def on_startup():
-    create_db()
+     init_db()
 
 @app.get("/brainrots")
 def get_brainrots():
