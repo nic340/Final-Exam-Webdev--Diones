@@ -9,9 +9,13 @@ async function loadBrainrots() {
 
   data.forEach(item => {
     const li = document.createElement("li");
-    li.textContent = `${item.title} - ${item.content} (Image: ${item.image})`;
+    li.innerHTML = `
+      <h3>@${item.title}</h3>
+      <p>${item.content}</p>
+      ${item.image ? `<img src="assets/images/${item.image}" alt="${item.title}" class="post-img">` : ""}
+    `;
     list.appendChild(li);
   });
 }
 
-loadBrainrots();
+window.addEventListener("DOMContentLoaded", loadBrainrots);
