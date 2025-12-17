@@ -9,13 +9,9 @@ async function loadBrainrots() {
 
   data.forEach(item => {
     const li = document.createElement("li");
-    li.innerHTML = `
-      <h3>@${item.title}</h3>
-      <p>${item.content}</p>
-      ${item.image ? `<img src="assets/images/${item.image}" alt="${item.title}" class="post-img">` : ""}
-    `;
+    li.textContent = `${item.title} - ${item.content}`;
     list.appendChild(li);
   });
 }
 
-window.addEventListener("DOMContentLoaded", loadBrainrots);
+loadBrainrots();
