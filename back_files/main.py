@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from sqlmodel import Session, select
-from .database import engine, create_db
+from database import engine, create_db
 from .models import Brainrot
 
 app = FastAPI()
