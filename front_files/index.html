@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Brainrot App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atomify | Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div class="login-container">
+    <img src="assets/images/logo.png" alt="Brainrot Busters (Atomified) Logo" class="logo">
+    <h1>Welcome to Brainrot Busters (Atomified)⚛️</h1>
+    <form id="login-form" action="feed.html" method="get">
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+      <p class="signup-link">
+        Don’t have an account? <a href="signup.html">Sign up</a>
+      </p>
+    </form>
+  </div>
 
-  <h1>Brainrot List</h1>
-  <ul id="brainrot-list"></ul>
-
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
