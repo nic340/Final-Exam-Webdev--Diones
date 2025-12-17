@@ -1,0 +1,618 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === BODY === */
+body {
+  background: url("../assets/images/background.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === LOGIN CONTAINER === */
+.login-container {
+  background: rgba(20, 20, 30, 0.8);
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+/* === LOGO === */
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 12px rgba(177, 159, 255, 0.9));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* === HEADINGS === */
+h1 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+/* === INPUTS === */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+/* === BUTTON === */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #7d5eff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #9a84ff;
+  box-shadow: 0 0 15px #9a84ff;
+  transform: translateY(-2px);
+}
+
+/* === SIGNUP PAGE === */
+/* === SIGNUP LINK === */
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #b19fff;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-shadow: 0 0 10px #b19fff;
+}
+
+/* Signup Title */
+.signup-title {
+  color: #eee;
+  text-shadow: 0 0 8px rgba(177, 159, 255, 0.4);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Back Button */
+.back-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  padding: 4px 10px; /* smaller padding */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+  width: auto; /* makes it fit the text */
+  display: inline-block; /* prevents stretching */
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(-2px);
+}
+
+/* Smaller text for login link */
+.small-text {
+  font-size: 13px;
+  color: #ccc;
+  margin-top: 12px;
+}
+
+.small-text a {
+  color: #b19fff;
+  text-decoration: none;
+}
+
+.small-text a:hover {
+  text-decoration: underline;
+}
+
+/* === FEED PAGE === */
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  width: 45px;
+}
+
+.navbar h1 {
+  font-size: 20px;
+  color: #fff;
+}
+
+.profile-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 14px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.profile-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Post Box */
+.post-box {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.post-input {
+  width: 70%;
+  max-width: 480px;
+  min-height: 80px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  color: #fff; /* white text */
+  font-family: inherit;
+  font-size: 14px;
+  backdrop-filter: blur(10px); /* glass effect */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+}
+
+.post-input:focus {
+  background: rgba(255, 255, 255, 0.15); /* slightly brighter when focused */
+}
+
+.post-btn {
+  background-color: #6b4f4f; /* coffee brown feel */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: auto; /*  prevents full width */
+  display: inline-block;
+}
+
+.post-btn:hover {
+  background-color: #5c4343;
+}
+
+/* Feed */
+.feed {
+  margin: 40px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.post {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  
+}
+
+.post h3 {
+  color: #b19fff;
+  margin-bottom: 6px;
+}
+
+.post .time {
+  font-size: 12px;
+  color: #bbb;
+}
+
+.post-img {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* === FEED PAGE SCROLL === */
+body.feed-page {
+  height: auto;
+  display: block;
+  overflow-y: auto;
+  align-items: unset;
+  justify-content: unset;
+}
+
+/* Feed Page Background */
+.feed-page {
+  background: url("../assets/images/background.png") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.post-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.like-btn, .comment-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-btn:hover, .comment-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.sidebar {
+  position: fixed;
+  right: 30px;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 16px;
+  border-radius: 12px;
+  width: 200px;
+  color: #fff;
+}
+
+.sidebar h3 {
+  margin-bottom: 10px;
+  color: #b19fff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  text-decoration: underline;
+}
+
+/* === PROFILE PAGE === */
+body.profile-page {
+  background: url("../assets/images/background.png") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.nav-logo {
+  width: 45px;
+  margin-right: 12px;
+}
+
+.navbar h1 {
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 8px rgba(177, 159, 255, 0.6);
+}
+
+/* === BACK BUTTON === */
+.back-btn {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1100;
+  backdrop-filter: blur(6px);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-2px);
+}
+
+/* === PROFILE HEADER / BANNER === */
+.profile-header {
+  width: 90%;
+  max-width: 1200px;
+  margin: 110px auto 30px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.3);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h2 {
+  color: #b19fff;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.profile-info p {
+  color: #ddd;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* === PROFILE STATS === */
+.profile-stats {
+  display: flex;
+  gap: 30px;
+  margin: 15px 0;
+}
+
+.profile-stats div {
+  text-align: center;
+}
+
+.profile-stats h3 {
+  font-size: 18px;
+  color: #fff;
+  margin: 0;
+}
+
+.profile-stats p {
+  font-size: 13px;
+  color: #ccc;
+  margin-top: 4px;
+}
+
+.edit-btn {
+  background: #6b4f4f;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bio-text {
+  font-size: 13px;
+  color: #ccc;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+}
+
+.profile-bio h3 {
+  font-size: 14px; 
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.edit-btn:hover {
+  background: #5c4343;
+  box-shadow: 0 0 10px rgba(107, 79, 79, 0.6);
+}
+
+/* === MAIN CONTENT === */
+.profile-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* === LEFT: PROFILE CARD === */
+.profile-card {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 25px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* === RIGHT: POSTS === */
+.user-posts {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-post {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 18px;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.user-post:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.user-post h4 {
+  color: #b19fff;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.user-post p {
+  color: #eee;
+  line-height: 1.5;
+}
+
+.user-post .time {
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 6px;
+  display: block;
+  text-align: right;
+}
+
+.activity-summary {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  margin-bottom: 0;
+}
+
+.activity-summary h3 {
+  font-size: 16px;
+  color: #b19fff;
+  margin-bottom: 10px;
+}
+
+.activity-summary ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.activity-summary li {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* space between activity summary and posts */
+  align-items: flex-start;
+  flex: 1;
+  min-width: 320px;
+}
+
+.logout-btn {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1100;
+  backdrop-filter: blur(5px);
+  width: auto; /* makes it compact */
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
