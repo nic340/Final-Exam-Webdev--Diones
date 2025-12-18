@@ -5,6 +5,7 @@ class Brainrot(SQLModel, table=True):
     title: str
     content: str
     image: str
+    user_id: int
 
 class User(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
